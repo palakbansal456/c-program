@@ -5,8 +5,6 @@ int main() {
     int a = 48;
     int b = 18;
 
-    // int originalA = a, originalB = b;
-
     while (b != 0) {
         int temp = b;
         b = a % b;
