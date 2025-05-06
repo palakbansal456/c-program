@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class Math {
+public:
+    // Static function to add two numbers
+    static int add(int a, int b) {
+        return a + b;
+    }
+
+    // Static function to subtract two numbers
+    static int subtract(int a, int b) {
+        return a - b;
+    }
+
+    // Static function to multiply two numbers
+    static int multiply(int a, int b) {
+        return a * b;
+    }
+
+    // Static function to divide two numbers
+    static double divide(int a, int b) {
+        if (b == 0) {
+            cout << "Error: Division by zero!" << endl;
+            return 0;
+        }
+        return static_cast<double>(a) / b;
+    }
+};
+
+int main() {
+    // Using static methods without creating an object
+    cout << "Addition: " << Math::add(10, 5) << endl;
+    cout << "Subtraction: " << Math::subtract(10, 5) << endl;
+    cout << "Multiplication: " << Math::multiply(10, 5) << endl;
+    cout << "Division: " << Math::divide(10, 5) << endl;
+
+    return 0;
+}
