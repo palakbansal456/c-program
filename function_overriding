@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+// Base class
+class Shape {
+public:
+    // Virtual function to be overridden
+    virtual void display() {
+        cout << "This is a shape." << endl;
+    }
+};
+
+// Derived class
+class Circle : public Shape {
+public:
+    // Overriding the display() method
+    void display() override {
+        cout << "This is a circle." << endl;
+    }
+};
+
+int main() {
+    Shape* s;        // Base class pointer
+    Circle c;        // Derived class object
+
+    s = &c;          // Base class pointer pointing to derived class object
+
+    s->display();    // Calls the overridden function in Circle
+
+    return 0;
+}
